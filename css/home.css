@@ -179,7 +179,7 @@ section.partners .logos-slide ul li {
 
 
 
-section.video {
+section.video-ad {
     background-color: #010409;
     padding-top: 120px;
     padding-left: 0px;
@@ -188,18 +188,13 @@ section.video {
     display: flex;
     align-items: center;
 }
-section.video .container-video {
+section.video-ad .container-video {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     display: flex;
     align-items: center;
-}
-
-.video-container {
-    flex: 1;
-    margin-right: 20px;
 }
 
 .text-container {
@@ -213,6 +208,17 @@ section.video .container-video {
 }
 .text-container p {
     font-size: 15px;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+@media (max-width: 858px) {
+    section.video-ad .container-video {
+        display: inline;
+    }
 }
 
 video {
