@@ -137,9 +137,16 @@ nav ul li a {
         width: 100%;
         display: block;
     }
+
     nav ul li a {
         font-size: 20px;
     }
+
+
+    nav #navbar-icon {
+        margin-left: 0;
+    }
+
     #check:checked ~ ul {
         right: 0%;
     }
