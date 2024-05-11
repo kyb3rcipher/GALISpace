@@ -15,32 +15,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/logos/star.png">
+    <link rel="icon" type="image/x-icon" href="images/logos/star.png">
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <a href="index.html"><img src="images/logos/gstar.png" class="navbar-logo" /></a>
-            <nav>
-                <ul id="menu-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products/index.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <!--<li><a href="#" class="fa fa-heart"></a></li>-->
-                    <li id="lightmode-switch"><i class="fa-solid fa-sun"></i></li>
-                    <li id="navbar-icon"><a href="#" class="fas fa-shopping-cart"></a></li>
-                    <li id="navbar-icon"><a href="#" class="fas fa-user"></a></li>
-                </ul>
-
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logos/gstar.png" class="navbar-logo"></a>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products/index.html">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                
+                <li><a href="#" class="fas fa-shopping-cart"></a></li>
+                <li id="navbar-icon"><a href="#" class="fas fa-user"></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="main">
         <div class="row">
             <div class="col">
-                <h1>GALISpace</h1>
+                <h1 style="font-size: 3em;">GALISpace</h1>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Iste nihil inventore itaque veritatis cupiditate consequatur! Deserunt, aperiam animi. Corporis,

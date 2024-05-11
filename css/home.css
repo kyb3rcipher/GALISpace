@@ -29,6 +29,7 @@ section.main .col {
     left: 0;
     margin-bottom: 20px;
     margin-left: 95px;
+    z-index: 998;
 }
 
 section.highlights {
@@ -120,6 +121,7 @@ section.partners .logos {
   padding: 60px 0;
   white-space: nowrap;
   position: relative;
+  z-index: 998;
 }
 
 section.partners .logos:before, section.partners .logos:after {
