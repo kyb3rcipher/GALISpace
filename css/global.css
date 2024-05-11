@@ -199,3 +199,22 @@ footer {
 .footer-container a:hover {
     color: var(--primary);
 }
+
+@media(max-width: 1400px) {
+    .footer-container {
+        max-width:900px
+    }
+
+    .footer-container div {
+        flex: unset;
+        width: 200px;
+        margin: 0 auto;
+        padding-left: 50px;
+        box-sizing: content-box
+    }
+
+    .footer-container div:last-child {
+        width: 100%;
+        margin: 60px auto
+    }
+}
