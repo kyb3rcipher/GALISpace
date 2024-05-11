@@ -1,0 +1,219 @@
+
+section.main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/backgrounds/stars.gif');
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+section.main .row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+section.main .col {
+    color: #7b7e8c;
+    flex-basis: 50%;
+}
+
+#scroll-down-icon {
+    width: 5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 20px;
+    margin-left: 95px;
+}
+
+section.highlights {
+    color: white;
+    background-color: #000408;
+    padding: 120px 0;
+    text-align: center;
+}
+section.highlights h1 {
+    font-size: 45px;
+    font-weight: 700;
+    background-image: linear-gradient(20deg, rgba(140, 66, 171, 1), rgba(191, 46, 93, 1));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+section.highlights i {
+    color: #BF2E5D;
+}
+section.highlights h4 {
+    color: white;
+    font-weight: bold;
+    line-height: 1.5em; 
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 1em 0;
+}
+section.highlights ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1110px;
+    margin: auto;
+}
+section.highlights li {
+    width: 370px;
+    line-height: 1.8;
+    padding: 20px 20px 0;
+    text-align: justify;
+}
+
+section.partners {
+    padding: 120px 0;
+    background: url('../images/backgrounds/neon.svg');
+    background-color: #16161D;
+    background-size: cover;
+    text-shadow: 0 1px 5px rgba(0,0,0,.2);
+}
+section.partners .partners-container {
+    color: white;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+section.partners .partners-container h4 {
+    font-weight: 400;
+}
+section.partners .partners-container h2 {
+    font-size: 32px;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+section.partners .partners-container h4, section.partners .partners-container p {
+    font-size: 20px;
+}
+section.partners .partners-container p {
+    font-weight: 700;
+    margin-block-start: 0.83em;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+section.partners .logos {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+section.partners .logos:before, section.partners .logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+section.partners .logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255, 0), #16161D);
+}
+
+section.partners .logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255, 0), #16161D);
+}
+
+section.partners .logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+section.partners .logos-slide {
+  display: inline-block;
+  animation: slide 35s infinite linear;
+}
+
+section.partners .logos-slide a {
+    color: white;
+}
+section.partners .logos-slide img {
+  height: 50px;
+  margin: 0 50px;
+  transition: transform 0.4s ease;
+}
+
+section.partners .logos-slide img:hover {
+    transform: scale(1.6);
+}
+
+section.partners .logos-slide ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section.partners .logos-slide ul li {
+  display: inline-block;
+  margin-right: 20px; /* Espacio entre los elementos */
+  transition: transform .1s linear;
+}
+
+
+
+section.video {
+    background-color: #010409;
+    padding-top: 120px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+}
+section.video .container-video {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.text-container {
+    color: white;
+    flex: 1;
+}
+
+.text-container h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+.text-container p {
+    font-size: 15px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
