@@ -22,14 +22,33 @@ section.main .col {
     flex-basis: 50%;
 }
 
+@media (max-width: 515px)  {
+    section.main h1 {
+        font-size: 5em;
+    }
+}
+@media (max-width: 385px)  {
+    section.main h1 {
+        font-size: 3em;
+    }
+}
+
+section.main p {
+    margin-bottom: 30px;
+}
+
 #scroll-down-icon {
     width: 5%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-bottom: 20px;
-    margin-left: 95px;
-    z-index: 998;
+    bottom: 20px;
+    left: 50px;
+}
+@media (max-width: 858px) {
+    #scroll-down-icon {
+        width: 10%;
+        bottom: 30px;
+        left: 20px;
+    }
 }
 
 section.highlights {
@@ -219,9 +238,17 @@ section.video-ad .container-video {
     section.video-ad .container-video {
         display: inline;
     }
+
+    .video-container {
+        margin-right: 0;
+    }
+
+    video {
+        margin-top: 30px;
+    }
 }
 
 video {
-    width: 100%;
+    width: 95%;
     height: auto;
 }
