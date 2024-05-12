@@ -2,6 +2,7 @@
 
 :root {
     --primary: #BF2E5D;
+    --white: #7B7E8C;
 }
 
 * {
@@ -199,11 +200,18 @@ footer {
 }
 
 .footer-container a {
-    color: white;
+    color: var(--white);;
     display: block;
 }
 
 .footer-container a:hover {
+    color: var(--primary);
+}
+
+.footer-container a.credits {
+    color: white;
+}
+.footer-container a.credits:hover {
     color: var(--primary);
 }
 
