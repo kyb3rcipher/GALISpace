@@ -70,10 +70,6 @@ nav ul li {
     margin-left: 60px;
 }
 
-nav #lightmode-switch {
-    cursor: pointer;
-}
-
 nav #navbar-icon {
     margin-left: 10px;
 }
@@ -81,7 +77,6 @@ nav #navbar-icon {
 nav ul li a {
     color: white;
     text-decoration: none;
-    height: 43px;
     cursor: pointer;
 }
 nav ul li a:hover {
@@ -159,10 +154,10 @@ nav .dropdown-menu div {
         opacity: 0;
         padding: 10px 0;
         position: absolute;
-        top: 29px;
+        top: 25px;
         flex-direction: column;
         white-space: pre;
-        border-radius: 0 var 6px 6px;
+        border-radius: 0 6px 6px;
         border: 1px solid rgba(0,0,0,.1);
         border-top: 0;
         box-shadow: 0 3px 15px rgba(127,127,127,.3);
@@ -184,11 +179,13 @@ nav .dropdown-menu div {
         opacity: 1
     }
 
-    nav a, nav li span {
+    nav .dropdown-menu div a, nav li span {
         padding-top: 10px;
         padding-left: 13px;
-        padding-right: 13px;
         padding-bottom: 10px;
+    }
+    nav .dropdown-menu div a {
+        padding-right: 13px;
     }
 }
 
