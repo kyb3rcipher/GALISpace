@@ -112,6 +112,9 @@ nav .dropdown-menu>span {
     font-size: 13px;
     font-weight: 700;
 }
+nav .dropdown-menu i {
+    margin-left: 5px;
+}
 
 nav .dropdown-menu div {
     background: #010409;
