@@ -24,7 +24,6 @@ html, body {
   height: 100%;
 }
 
-button,
 .red-button,
 button.red-button,
 .red-button.blue-button,
@@ -42,7 +41,6 @@ button.red-button,
   transition-duration: .2s;
 }
 
-button.active,
 .active.red-button,
 button:active,
 .red-button:active {
