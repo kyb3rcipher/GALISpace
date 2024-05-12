@@ -4,7 +4,7 @@ body {
 
 main {
     color: white;
-    padding: 50px 50px;
+    padding: 50px;
     margin-top: 20px;
 }
 
@@ -13,10 +13,17 @@ main h1 {
     font-size: 60px;
     margin-bottom: 25px;
 }
+@media (max-width: 415px) {
+    main h1 {
+        font-size: 3em;
+    }
+}
 
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+    justify-content: center;
 }
 .products .card {
     width: 310px;
@@ -25,7 +32,6 @@ main h1 {
     border-radius: 5px;
     padding: 3px;
     margin-bottom: 20px;
-
     border: 3px solid rgba(127,127,127,.4);
 }
 
