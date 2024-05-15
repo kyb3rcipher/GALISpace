@@ -65,10 +65,9 @@ section.highlights i {
 }
 section.highlights h4 {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.5em; 
     font-size: 2em;
-    font-weight: lighter;
     margin: 1em 0;
 }
 section.highlights ul {
