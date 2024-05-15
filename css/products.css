@@ -74,9 +74,11 @@ main h1 {
     border: 3px solid #BF2E5D;
     background-color: #BF2E5D;
     border-radius: 20px;
+    transition-property: none;
 }
 
 .products .card .box .buy-btn:hover {
+    transition-property: none;
     cursor: pointer;
     background-color: white;
     color: black;
