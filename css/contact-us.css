@@ -1,0 +1,48 @@
+#message-form {
+    display: flex;
+}
+
+#container-form {
+    padding: 30px;
+    padding-bottom: 30px;
+}
+
+fieldset {
+    border-radius: 20px;
+}
+legend {
+    margin-left: 30px;
+}
+
+label, input[type="submit"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    border-radius: 10px;
+}
+input, select {
+    width: 60%;
+}
+
+textarea {
+    width: 550px;
+    height: 200px;
+    resize: vertical;
+}
+
+main img {
+    height: 400px;
+    width: 400px;
+    margin-left: 55px;
+}
+
+@media (max-width: 858px) {
+    #message-form {
+        display: inline;
+    }
+    main img {
+        margin-left: 0px;
+    }
+}
