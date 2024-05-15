@@ -52,7 +52,9 @@ hr,select:not(select) {
 select {
   border: 0;
   background: #f2f3f7;
-  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center;
+  /*background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center;*/
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center, linear-gradient(rgba(0, 11, 29, 0.5), rgba(0, 11, 29, 0.5)), #000b1d;
+  /*position: relative;*/
   color: #7b7e8c;
   font-weight: normal;
   padding: 0 1.25em;
@@ -76,9 +78,16 @@ select {
 input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
 input[type="email"], input[type="password"], input[type="date"],
 input[type="month"], input[type="week"], input[type="time"],
-input[type="number"], input[type="color"], select, textarea {
-  border: 0;
+input[type="number"], input[type="color"],
+textarea {
   background: #000b1d;
+}
+input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
+input[type="email"], input[type="password"], input[type="date"],
+input[type="month"], input[type="week"], input[type="time"],
+input[type="number"], input[type="color"],
+select, textarea {
+  border: 0;
   color: #7b7e8c;
   font-weight: normal;
   padding: 0 1.25em;
