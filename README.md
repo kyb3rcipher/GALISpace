@@ -9,3 +9,4 @@ School project 2024 4th grade of high school programming.
 - Google Fonts.
 - Miscellaneous images.
 - Partially based on Kali Linux [home page](https://www.kali.org/).
+- 404 Website by [@vikas-kukreti](https://github.com/vikas-kukreti/404-error-page).
