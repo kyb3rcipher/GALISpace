@@ -1,5 +1,4 @@
-## TODO
-- Fix sies titles.
+## TODO.
 - Fix css order.
 - Fix responsive navbar.
 - Make 404 site.
