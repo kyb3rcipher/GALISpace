@@ -1,6 +1,4 @@
 ## TODO
-- Finish product-site (remove css inline and br, add slider for main pictures and video, fix styles).
-- Make responsive product-site (push here).
 - Fix sies titles.
 - Fix css order.
 - Fix responsive navbar.
@@ -12,3 +10,4 @@
 
 ### Extras:
 - Create the shopping-cart.
+- Add images slider to product site.

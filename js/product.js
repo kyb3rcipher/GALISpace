@@ -1,7 +1,7 @@
-const container = document.querySelector(".images-slider");
+const container = document.querySelector(".products-slider");
 const slider = document.querySelector(".carousel");
 const initialCardWidth = slider.querySelector(".card").offsetWidth;
-const controlBtns = document.querySelectorAll(".images-slider i");
+const controlBtns = document.querySelectorAll(".products-slider i");
 const sliderChildren = [...slider.children];
 
 let isMoving = false, isAutomatic = true, startMouseX, startScrollLeft, timerId;

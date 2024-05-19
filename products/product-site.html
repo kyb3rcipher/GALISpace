@@ -7,9 +7,8 @@
     <title>GALISpace | Glasses</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/skeuos.css">
-    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/product.css">
 
     <!-- Font Awesome Icons -->
@@ -52,26 +51,24 @@
 </header>
 
 <main>
-    <div class="product-container">
-        <div class="product-container-main">
+    <div id="product-container">
+        <div id="product-container-main">
             <img src="../images/products/telescopes/Bresser-Telescope-AC-90-900-Messier-EXOS-1.jpg">
 
-            <div class="text-container">
+            <div id="left-container">
                 <h2>Telescope Achromat Bresser AC 90/900 EXOS-1</h2>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+                <div id="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
 
                 <p id="price">USD $386.00</p>
                 
 
-                Description:
+                <div id="description">Description:
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae voluptatum asperiores quas eligendi laborum aliquam dolore repellat dolorem officiis ullam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur dolorum repellat eaque minima sit officia sed repudiandae laborum ut ea.</p>
+                </div>
 
-                <br>
-                <label for="quantity-select" style="margin-right: 10px;">Qty:</label>
+                <label for="quantity-select">Qty:</label>
                 <select name="quantity-select" id="quantity-select">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -85,29 +82,27 @@
                     <option value="10">10</option>
                 </select>
                 
-
-                <br><br><br>
-                <button class="red-button" style="width: 100%; margin-bottom: 50px;" onclick="demoWebsite()">Add to cart</button>
-
+                <button id="buy-button" class="red-button">Add to cart</button>
                 
-                <hr>    <br>
-                <div style="text-wrap: wrap;">
-                    <!--USE EM HERE-->
-                    <p><i class="fa-solid fa-truck-fast"></i> Free shipping on all orders over $100</p>
-                    <p style="font-size: 10px;">All our purchases over $100 dollars have totally free national shipping</p>
-                    <p><i class="fa-solid fa-shield"></i> Security and Guarantee in payment</p>
-                    <p style="font-size: 10px;">Our purchases have a tracking guarantee as well as the delivery of our products. If due to any oversight the product arrives damaged, our 30-day guarantee will replace it.</p>
-                    <p><i class="fa-solid fa-boxes-packing"></i> Free returns</p>
-                    <p style="font-size: 10px;">You have up to two months after purchasing the product to claim a free return of the product if it is in optimal condition.</p>
-                    <p><i class="fa-solid fa-leaf"></i> Sustaintity at GALISpace (10M+ trees)</p>
-                    <p style="font-size: 10px;">Our products are 100% made with recycled materials as well as supporting our GALIEarth foundation in which we help the planet.</p>
+                <hr id="return-separation">
+
+                <div id="return">
+                    <span><i class="fa-solid fa-truck-fast"></i> Free shipping on all orders over $100</span>
+                    <p>All our purchases over $100 dollars have totally free national shipping</p>
+                    <span><i class="fa-solid fa-shield"></i> Security and Guarantee in payment</span>
+                    <p>Our purchases have a tracking guarantee as well as the delivery of our products. If due to any oversight the product arrives damaged, our 30-day guarantee will replace it.</p>
+                    <span><i class="fa-solid fa-boxes-packing"></i> Free returns</span>
+                    <p>You have up to two months after purchasing the product to claim a free return of the product if it is in optimal condition.</p>
+                    <span><i class="fa-solid fa-leaf"></i> Sustaintity at GALISpace (10M+ trees)</span>
+                    <p>Our products are 100% made with recycled materials as well as supporting our GALIEarth foundation in which we help the planet.</p>
                 </div>
                 
             </div>
         </div>
-        <br><br>
-        <hr>
-        <div class="product-description">
+        
+        <hr id="product-description-separation">
+        
+        <div id="product-description">
             <h3>Description:</h3>
             <ul>
                 <li>Comfortable and breathable: Made with high-quality materials, these socks are perfect for all-day wear.</li>
@@ -117,8 +112,8 @@
                 <li>Perfect gift: Surprise your friends and family with these cute and comfy socks.</li>
             </ul>
             <h3>Specifications:</h3>
-            <table border="1">
-                <br><br><tr>
+            <table>
+                <tr>
                     <td>Type</td>
                     <td>Refractor</td>
                 </tr>
@@ -187,48 +182,45 @@
           
     </div>
 
-
-        <!-- Product card start -->
-        <!-- https://www.amazon.com.mx/Bluelander-Binoculares-Prism%C3%A1ticos-Impermeables-Antideslizante/dp/B09P29BW8J/ref=asc_df_B09P29BW8J/?tag=gledskshopmx-20&linkCode=df0&hvadid=547231803530&hvpos=&hvnetw=g&hvrand=14244276126486076522&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1010047&hvtargid=pla-1591698895813&psc=1&mcid=4445c90c9e923fdb8418be60259dea94 -->
-        
-
-    <h2>Similar products:</h2>
-    <div class="images-slider">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <ul class="carousel">
-          <li class="card">
-            <img src="../images/products/telescopes/Omegon-Telescope-N-114-900-EQ-1.jpg" draggable="false">
-            <h2>Omegon N 114/900 EQ-1</h2>
-            <span>$10000.00</span>
-          </li>
-          <li class="card">
-            <img src="../images/products/glasses/eclipse-glasses-classic.jpg" draggable="false">
-            <h2>Eclipse glasses classic</h2>
-            <span>$30.00</span>
-          </li>
-          <li class="card">
-            <img src="../images/products/toys/LEGO-21340.jpg" draggable="false">
-            <h2>Spacial Era 21340</h2>
-            <span>$70.00</span>
-          </li>
-          <li class="card">
-            <img src="../images/products/micellaneous/binoculars.jpg" draggable="false">
-            <h2>Binoculars Prismatics (8x)</h2>
-            <span>$23.00</span>
-          </li>
-          <li class="card">
-            <img src="../images/products/pictures/iss071e05057.jpg" alt="img" draggable="false">
-            <h2>SpaceX Dragon Endeavour</h2>
-            <span>$100.00</span>
-          </li>
-          <li class="card">
-            <img src="../images/products/glasses/sun-glasses.jpg" alt="img" draggable="false">
-            <h2>Sun glasses</h2>
-            <span>$80.00</span>
-          </li>
-        </ul>
-        <i id="right" class="fa-solid fa-angle-right"></i>
-      </div>
+    <div id="similar-products-slider">
+        <h2 id="title">Similar products:</h2>
+        <div class="products-slider">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+            <li class="card">
+                <img src="../images/products/telescopes/Omegon-Telescope-N-114-900-EQ-1.jpg" draggable="false">
+                <h2>Omegon N 114/900 EQ-1</h2>
+                <span>$10000.00</span>
+            </li>
+            <li class="card">
+                <img src="../images/products/glasses/eclipse-glasses-classic.jpg" draggable="false">
+                <h2>Eclipse glasses classic</h2>
+                <span>$30.00</span>
+            </li>
+            <li class="card">
+                <img src="../images/products/toys/LEGO-21340.jpg" draggable="false">
+                <h2>Spacial Era 21340</h2>
+                <span>$70.00</span>
+            </li>
+            <li class="card">
+                <img src="../images/products/micellaneous/binoculars.jpg" draggable="false">
+                <h2>Binoculars Prismatics (8x)</h2>
+                <span>$23.00</span>
+            </li>
+            <li class="card">
+                <img src="../images/products/pictures/iss071e05057.jpg" alt="img" draggable="false">
+                <h2>SpaceX Dragon Endeavour</h2>
+                <span>$100.00</span>
+            </li>
+            <li class="card">
+                <img src="../images/products/glasses/sun-glasses.jpg" alt="img" draggable="false">
+                <h2>Sun glasses</h2>
+                <span>$80.00</span>
+            </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
     
 </main>
 
