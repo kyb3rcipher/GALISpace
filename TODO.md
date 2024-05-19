@@ -1,5 +1,4 @@
 ## TODO.
-- Make 404 site.
 - Create audio site.
 - Refactor styles.
 - Make light-mode
