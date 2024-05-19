@@ -123,7 +123,7 @@ nav .dropdown-menu div {
     background: #010409;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 858px) {
     nav .dropdown-menu:hover {
         transform:translateY(-2px)
     }
