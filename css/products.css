@@ -35,7 +35,7 @@ main h1 {
     border: 3px solid rgba(127,127,127,.4);
 }
 
-.products .card img {
+.products .card img, .products .card video {
     height: 250px;
     width: 100%;
     border-radius: 5px;
