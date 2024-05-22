@@ -24,7 +24,7 @@ hr {
     align-items: center;
 }
 
-#product-container-main img {
+#product-container-main img, #product-container-main video {
     width: 800px;
     height: 580px;
     border-radius: 10px;
