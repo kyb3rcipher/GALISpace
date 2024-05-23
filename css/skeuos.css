@@ -80,7 +80,7 @@ input[type="email"], input[type="password"], input[type="date"],
 input[type="month"], input[type="week"], input[type="time"],
 input[type="number"], input[type="color"],
 textarea {
-  background: #000b1d;
+background: #000b1d;
 }
 input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
 input[type="email"], input[type="password"], input[type="date"],
@@ -169,6 +169,8 @@ input.red-button.active[type="submit"], input.red-button[type="submit"]:active {
 button.magenta-button,
 .magenta-button.blue-button,
 input.magenta-button[type="submit"] {
+  color: white;
+  font-weight: bold;
   background: #D71655;
   box-shadow: 0 0 0.5em rgba(228, 48, 48, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
   border-radius: 6px 6px 8px 8px;
