@@ -1,7 +1,6 @@
 ## TODO.
 - Create audio site.
 - Refactor styles.
-- Make light-mode
 - Create product-site pero each product.
 
 ### Extras:

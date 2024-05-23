@@ -24,3 +24,37 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
     }
 });
+
+
+// LightMode switch
+let lightMode = localStorage.getItem('lightMode');
+const lightModeToggle = document.querySelector('#light-mode-toggle');
+
+// Check the initial state
+if (lightMode === 'enabled') {
+    document.body.classList.add('light-mode');
+    lightModeToggle.checked = true;
+} else {
+    document.body.classList.add('dark-mode'); // Add default dark-mode
+}
+
+const enableLightMode = () => {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+    localStorage.setItem('lightMode', 'enabled');
+}
+
+const disableLightMode = () => {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('lightMode', 'disabled');
+}
+
+// Function for on-change event in switch
+function toggleLightMode() {
+    if (localStorage.getItem('lightMode') !== 'enabled') {
+        enableLightMode();
+    } else {
+        disableLightMode();
+    }
+}

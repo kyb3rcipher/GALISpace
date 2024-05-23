@@ -1,9 +1,13 @@
-body {
-    background: #010409;
+body.light-mode {
+    color: black;
+    background: var(--light-body-color);
+}
+body.dark-mode {
+    color: white;
+    background: black;
 }
 
 main {
-    color: white;
     padding: 50px;
     margin-top: 20px;
 }
@@ -25,14 +29,21 @@ main h1 {
     justify-items: center;
     justify-content: center;
 }
+
+.light-mode .products .card {
+    background-color: var(--light-second-background-color);
+}
+.dark-mode .products .card {
+    background-color: #17171C;
+}
 .products .card {
     width: 310px;
-    background: #17171C;
-    box-shadow: 0 10px 20px rgba(0,0,0, 0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0, 0.5);
     border-radius: 5px;
     padding: 3px;
     margin-bottom: 20px;
-    border: 3px solid rgba(127,127,127,.4);
+    border: 3px solid rgba(127,127,127, 0.4);
+    border-radius: 10px;
 }
 
 .products .card img, .products .card video {
@@ -49,7 +60,6 @@ main h1 {
 .products .card h2 {
     font-weight: 900;
     font-size: 20px;
-    color: white;
     padding: 0 20px;
 }
 

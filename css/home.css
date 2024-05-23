@@ -51,9 +51,15 @@ section.main p {
     }
 }
 
-section.highlights {
+.dark-mode section.highlights {
     color: white;
     background-color: #000408;
+}
+.light-mode section.highlights {
+    color: black;
+    background-color: #F9F8F9;
+}
+section.highlights {
     padding: 120px 0;
     text-align: center;
 }
@@ -63,8 +69,14 @@ section.highlights h1 {
 section.highlights i {
     color: #BF2E5D;
 }
-section.highlights h4 {
+
+.dark-mode section.highlights h4 {
     color: white;
+}
+.light-mode section.highlights h4 {
+    color: black;
+}
+section.highlights h4 {
     font-weight: 500;
     line-height: 1.5em; 
     font-size: 2em;
@@ -85,15 +97,20 @@ section.highlights li {
     text-align: justify;
 }
 
+.dark-mode section.partners {
+    color: white;
+    background-color: #16161D;
+}
+.light-mode section.partners {
+    background-color: #EEF3F7;
+}
 section.partners {
     padding: 120px 0;
     background: url('../images/backgrounds/neon.svg');
-    background-color: #16161D;
     background-size: cover;
     text-shadow: 0 1px 5px rgba(0,0,0,.2);
 }
 section.partners .partners-container {
-    color: white;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -146,14 +163,26 @@ section.partners .logos:before, section.partners .logos:after {
   z-index: 2;
 }
 
+.dark-mode section.partners .logos:before {
+    color: white;
+    background: linear-gradient(to left, rgba(255,255,255, 0), #16161D);
+}
+.light-mode section.partners .logos:before {
+    background: linear-gradient(to left, rgba(255,255,255, 0), #EEF3F7);
+}
 section.partners .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255,255,255, 0), #16161D);
 }
 
+.dark-mode section.partners .logos:after {
+    color: white;
+    background: linear-gradient(to right, rgba(255,255,255, 0), #16161D);
+}
+.light-mode section.partners .logos:after {
+    background: linear-gradient(to right, rgba(255,255,255, 0), #EEF3F7);
+}
 section.partners .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255,255,255, 0), #16161D);
 }
 
 section.partners .logos:hover .logos-slide {
@@ -165,9 +194,13 @@ section.partners .logos-slide {
   animation: slide 35s infinite linear;
 }
 
-section.partners .logos-slide a {
+.dark-mode section.partners .logos-slide a {
     color: white;
 }
+.light-mode section.partners .logos-slide a {
+    color: black;
+}
+
 section.partners .logos-slide img {
   height: 50px;
   margin: 0 50px;
@@ -192,8 +225,13 @@ section.partners .logos-slide ul li {
 
 
 
-section.video-ad {
+.dark-mode section.video-ad {
     background-color: #010409;
+}
+.light-mode section.video-ad {
+    background-color: var(--light-body-color);
+}
+section.video-ad {
     padding-top: 120px;
     padding-left: 0px;
     padding-right: 0px;
@@ -210,8 +248,10 @@ section.video-ad .container-video {
     align-items: center;
 }
 
-.text-container {
+.dark-mode section.video-ad {
     color: white;
+}
+.text-container {
     flex: 1;
 }
 

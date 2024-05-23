@@ -34,13 +34,15 @@ select:focus, textarea:not(select):focus, .paper {
   box-shadow: 6px 6px 10px rgba(0,0,0, 0.1), -6px -6px 30px white;
 }
 
+.light-mode select {
+  background: #f2f3f7;
+}
 .outset, button, .checktext input + span, .blue-button, .checktext input:checked + span, button.blue-button, .green-button, button.green-button, .green-button.blue-button, .red-button, button.red-button, .red-button.blue-button, .red-button.green-button, input[type="button"], input[type="submit"], input[type="reset"], select, input[type="text"]:not(select):focus, input[type="search"]:not(select):focus, input[type="tel"]:not(select):focus, input[type="url"]:not(select):focus,
 input[type="email"]:not(select):focus, input[type="password"]:not(select):focus, input[type="date"]:not(select):focus,
 input[type="month"]:not(select):focus, input[type="week"]:not(select):focus, input[type="time"]:not(select):focus,
 input[type="number"]:not(select):focus, input[type="color"]:not(select):focus, select:not(select):focus, textarea:not(select):focus, .paper
-,select {
+, select {
   border-radius: 10px;
-  /*background: #f2f3f7;*/
 }
 
 hr, select:not(select) {
@@ -49,11 +51,17 @@ hr, select:not(select) {
   background: #f8f9fb;
 }
 
+.dark-mode select {
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center, linear-gradient(rgba(0, 11, 29, 0.5), rgba(0, 11, 29, 0.5)), #000b1d;
+  background-size: 1.2em;
+}
+.light-mode select {
+  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center, #F2F3F7;
+  background-size: 1.2em;
+}
 select {
   border: 0;
   background: #f2f3f7;
-  /*background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center;*/
-  background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxOSAxOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCguMDM0IDAgMCAuMDM0IC02LjggMS43ZS01KSIgc3R5bGU9ImZpbGw6IzdiN2U4YyI+PHBhdGggZD0ibTQ4MCAzNDQtMjExLTIxMmMtMTYtMTYtNDEtMTYtNTcgMC0xNiAxNi0xNiA0MiAwIDU3bDIzOCAyMzljOC40IDguNSAyMCAxMiAzMSAxMiAxMSAwLjU2IDIyLTMuMiAzMS0xMmwyMzgtMjM5YzE2LTE2IDE2LTQyIDAtNTdzLTQxLTE2LTU3IDB6IiBzdHlsZT0iZmlsbDojN2I3ZThjIi8+PC9nPjwvc3ZnPgo=) no-repeat right 1em center, linear-gradient(rgba(0, 11, 29, 0.5), rgba(0, 11, 29, 0.5)), #000b1d;
   /*position: relative;*/
   color: #7b7e8c;
   font-weight: normal;
@@ -71,16 +79,22 @@ select {
   -moz-user-select: text;
   -ms-user-select: text;
   transition: box-shadow .2s;
-  background-size: 1.2em;
   -webkit-appearance: none;
 }
 
-input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
-input[type="email"], input[type="password"], input[type="date"],
-input[type="month"], input[type="week"], input[type="time"],
-input[type="number"], input[type="color"],
-textarea {
-background: #000b1d;
+.dark-mode input[type="text"], .dark-mode input[type="search"], .dark-mode input[type="tel"], .dark-mode input[type="url"],
+.dark-mode  input[type="email"], .dark-mode  input[type="password"], .dark-mode input[type="date"],
+.dark-mode input[type="month"], .dark-mode input[type="week"], .dark-mode input[type="time"],
+.dark-mode input[type="number"], .dark-mode input[type="color"],
+.dark-mode textarea {
+  background: #000b1d;
+}
+.light-mode input[type="text"], .light-mode input[type="search"], .light-mode input[type="tel"], .light-mode input[type="url"],
+.light-mode  input[type="email"], .light-mode  input[type="password"], .light-mode input[type="date"],
+.light-mode input[type="month"], .light-mode input[type="week"], .light-mode input[type="time"],
+.light-mode input[type="number"], .light-mode input[type="color"],
+.light-mode textarea {
+  background: #f2f3f7;
 }
 input[type="text"], input[type="search"], input[type="tel"], input[type="url"],
 input[type="email"], input[type="password"], input[type="date"],

@@ -1,11 +1,13 @@
 
 html, body {
-    color: white;
-    background: #010409;
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
+}
+body.dark-mode {
+    color: white;
+    background: #010409;
 }
 
 main {

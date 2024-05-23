@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary: #BF2E5D;
-    --white: #7B7E8C;
+    --primary-color: #BF2E5D;
+
+    --light-body-color: #F9F9F9;
+    --light-second-background-color: whiteEFE;
 }
 
 * {
@@ -22,7 +24,7 @@ p {
 }
 
 a {
-    color: var(--primary);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -62,7 +64,6 @@ header {
 }
 
 nav {
-    color: white;
     flex: 1;
     text-align: right;
 }
@@ -77,13 +78,18 @@ nav #navbar-icon {
     margin-left: 10px;
 }
 
-nav ul li a {
+.dark-mode nav ul li a {
     color: white;
+}
+.light-mode nav ul li a {
+    color: black;
+}
+nav ul li a {
     text-decoration: none;
     cursor: pointer;
 }
 nav ul li a:hover {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .navbar {
@@ -111,6 +117,9 @@ nav ul li a:hover {
     margin-left: 40px;
 }
 
+.dark-mode .dropdown-menu>span {
+    color: white;
+}
 nav .dropdown-menu>span {
     font-size: 13px;
     font-weight: 700;
@@ -119,8 +128,11 @@ nav .dropdown-menu i {
     margin-left: 5px;
 }
 
-nav .dropdown-menu div {
-    background: #010409;
+.dark-mode nav .dropdown-menu div {
+    background-color: #010409;
+}
+.light-mode nav .dropdown-menu div {
+    background-color: white;
 }
 
 @media (min-width: 858px) {
@@ -131,7 +143,7 @@ nav .dropdown-menu div {
     nav .dropdown-menu>span {
         border-radius: 6px 6px 0 0;
         position: relative;
-        border-right: 10px solid transparent;
+        padding-right: 10px;
         z-index: 2;
         border-bottom: 0;
         transition-property: box-shadow, border, background-color;
@@ -140,17 +152,20 @@ nav .dropdown-menu div {
         cursor: pointer;
     }
 
+    .light-mode nav .dropdown-menu:hover>span {
+        background-color: #010409;
+        background-color: white;
+    }
     nav .dropdown-menu:hover>span {
         transition-duration: .3s;
         box-shadow: -4px -4px 15px -4px rgba(127,127,127,.2);
         border-color: rgba(0,0,0,.1);
-        background: #010409;
-        color: var(--primary-color);
+        color: var(--primary-color-color);
         text-shadow: none;
     }
 
     nav .dropdown-menu:hover>span {
-        color: var(--primary);
+        color: var(--primary-color);
         background: #010409;
     }
 
@@ -223,6 +238,13 @@ nav .dropdown-menu div {
         z-index: 999; 
     }
     
+    .dark-mode nav ul {
+        background-color: #16171D;
+    }
+    .light-mode nav ul {
+        background-color: white;
+    }
+    
     nav ul {
         display: flex;
         flex-direction: column;
@@ -231,7 +253,6 @@ nav .dropdown-menu div {
         position: fixed;
         width: 100vw;
         height: 100%;
-        background: #16171D;
         top: 0;
         bottom: 0;
         right: -100%;
@@ -260,6 +281,9 @@ nav .dropdown-menu div {
         right: 0%;
     }
 
+    .light-mode nav .dropdown-menu div {
+        background-color: var(--light-body-color);
+    }
     nav .dropdown-menu div {
         display: flex;
         flex-direction: column;
@@ -289,7 +313,9 @@ footer {
     padding: 20px 0;
     color: white;
     background-color: #000001;
-    box-shadow: 0px 30px 80px var(--primary);
+}
+.dark-mode footer {
+    box-shadow: 0px 30px 80px var(--primary-color);
 }
 
 .footer-container {
@@ -327,7 +353,7 @@ footer {
 }
 
 .footer-container i {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .footer-container a {
@@ -336,14 +362,14 @@ footer {
 }
 
 .footer-container a:hover {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 .footer-container a.credits {
     color: white;
 }
 .footer-container a.credits:hover {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 
 @media(max-width: 1400px) {
@@ -362,4 +388,55 @@ footer {
         width: 100%;
         margin: 60px auto
     }
+}
+
+
+.switch {
+    height: 2.5em;
+    width: 5em;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 10px
+}
+
+.switch input {
+    display: none
+}
+
+.switch input+div {
+    height: 100%;
+    width: 100%;
+    border-radius: 999px;
+    background: var(--primary-color);
+    padding: .3em
+}
+
+.switch input+div::before {
+    content: '';
+    display: block;
+    height: 1.9em;
+    width: 1.9em;
+    border-radius: 100%;
+    background: white;
+    transform: translateX(0);
+    transition: transform .2s
+}
+
+.switch input:checked+div::before {
+    transform: translateX(2.5em)
+}
+
+.darkmode-switch {
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 4px
+}
+
+.darkmode-switch .switch {
+    vertical-align: bottom;
+    margin: -4px 10px
 }
