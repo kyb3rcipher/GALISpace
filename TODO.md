@@ -2,8 +2,10 @@
 - Add PR map to about-us.
 - Create audio site.
 - Refactor styles.
-- Create product-site pero each product.
+- Create product-site per each product.
+- Create the shopping-cart.
+- Create login.
+- Make funcionallity website in php.
 
 ### Extras:
-- Create the shopping-cart.
 - Add images slider to product site.
