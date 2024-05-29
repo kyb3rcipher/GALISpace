@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALISpace</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/skeuos.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/shopping.cart.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logos/star.png">
+</head>
+
+<body>
+<header>
+    <div class="navbar">
+        <a href="index.html"><img src="images/logos/gstar.svg" class="navbar-logo"></a>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown-menu">
+                    <span>Products <i class="fa-solid fa-angle-down"></i></span>
+                    <div>
+                        <a href="products/telescopes.html">Telescopes</a>
+                        <a href="products/toys.html">Toys</a>
+                        <a href="products/glasses.html">Glasses</a>
+                        <a href="products/pictures.html">Picture</a>
+                        <a href="products/audios.html">Audios</a>
+                        <a href="products/micellaneous.html">Miscellaneous</a>
+                    </div>
+                </li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                
+                <li><a href="#" class="fas fa-shopping-cart"></a></li>
+                <li id="navbar-icon"><a href="#" class="fas fa-user"></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div id="products">
+        <input type="checkbox"> <h2 id="select-all">Select all (7)</h2>
+        <hr id="select-all-divider">
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/toys/LEGO-21340.jpg">
+            
+            <div id="text">
+                <p>Toy</p>
+                <h3>Spacial Era 21340</h3>
+                <div id="price-select">
+                    <p id="price">USD $70.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+        
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/telescopes/Meade-Telescope-AC-90-900-Polaris-EQ.jpg">
+            
+            <div id="text">
+                <p>Telescope</p>
+                <h3>Meade AC 90/900 Polaris</h3>
+                <div id="price-select">
+                    <p id="price">USD $349.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/glasses/eclipse-glasses-classic.jpg">
+            
+            <div id="text">
+                <p>Glasses</p>
+                <h3>Eclipse glasses classic</h3>
+                <div id="price-select">
+                    <p id="price">USD $30.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/pictures/GSFC_20171208_Archive_e001872.jpg">
+            
+            <div id="text">
+                <p>Picuture</p>
+                <h3>Telescopes Turbulent</h3>
+                <div id="price-select">
+                    <p id="price">USD $8.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/toys/Projector.jpg">
+            
+            <div id="text">
+                <p>Toy</p>
+                <h3>Solar System</h3>
+                <div id="price-select">
+                    <p id="price">USD $4.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/micellaneous/binoculars.jpg">
+            
+            <div id="text">
+                <p>Miscellaneous</p>
+                <h3>Binoculars Prismatics (8x)</h3>
+                <div id="price-select">
+                    <p id="price">USD $24.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+
+        <div class="product">
+            <input type="checkbox">
+            <img src="images/products/toys/LEGO-31134.jpg">
+            
+            <div id="text">
+                <p>Toy</p>
+                <h3>Spaceship 31134</h3>
+                <div id="price-select">
+                    <p id="price">USD $7.00</p>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <hr>
+            </div>
+
+            <i id="remove" class="fa-solid fa-trash"></i>
+        </div>
+        
+
+    </div>
+
+    <div id="order-summary">
+        <h2>Order Summary</h2>
+
+        Total (7 items) USD$492.00 <br>
+        <button>Checkout (7)</button> <br>
+        <p id="payment-info"><i class="fa-solid fa-circle-info"></i> Item availability and pricing are not guaranteed until payment is final.</p>
+        
+        <hr>
+
+        <h4><i class="fa-solid fa-lock"></i> Secure Privacy</h4>
+        Protecting your privacy is important to us! Please be assured that your information will be kept secured and uncompromised. We will only use your information in accordance with our privacy policy to provide and improve our services to you.
+        <h4><i class="fa-solid fa-shield"></i> Safe Payment Options</h4>
+        GALISpace is committed to protecting your payment information. We follow PCI DSS standards, use strong encryption, and perform regular reviews of its system to protect your privacy.
+        
+        <div id="payment-methods">
+            <p>1. Payment methods</p>
+            <img src="images/shopping-cart/paypal.webp">
+            <img src="images/shopping-cart/visa.webp">
+            <img src="images/shopping-cart/americanexpress.webp">
+            <img src="images/shopping-cart/discover.webp">
+            <img src="images/shopping-cart/maestro.webp">
+            <img src="images/shopping-cart/dinersclub.webp">
+            <img src="images/shopping-cart/jcb.webp">
+            <img src="images/shopping-cart/carnet.webp">
+            <img src="images/shopping-cart/mercadopago.webp">
+            
+            <p>2. Security certification</p>
+            <img src="images/shopping-cart/pci.webp">
+            <img src="images/shopping-cart/mastercard-id-check.webp">
+            <img src="images/shopping-cart/amercanexpress-safekey.webp">
+            <img src="images/shopping-cart/discover-protectbuy.webp">
+            <img src="images/shopping-cart/jcb-secure.webp">
+            <img src="images/shopping-cart/visa-secure.webp">
+            <img src="images/shopping-cart/trusted-site.webp">
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="darkmode-switch">
+        <span>DARK</span>
+        <label class="switch">
+            <input type="checkbox" id="light-mode-toggle" name="toggle-darkmode" onchange="toggleLightMode()">
+            <div></div>
+        </label>
+        <span>LIGHT</span>
+    </div>
+    
+    <div class="footer-container">
+        <div>
+            <h4>Links</h4>
+            <a href="index.html" target="_blank">Home</a>
+            <a href="#" target="_blank">Products</a>
+            <a href="contact-us.html" target="_blank">Contact Us</a>
+            <a href="about-us.html" target="_blank">About Us</a>
+        </div>
+
+        <div>
+            <h4>Products</h4>
+            <a href="products/telescopes.html" target="_blank">Telescopes</a>
+            <a href="products/toys.html" target="_blank">Toys</a>
+            <a href="products/glasses.html" target="_blank">Glasses</a>
+            <a href="products/pictures.html" target="_blank">Pictures</a>
+            <a href="products/audios.html" target="_blank">Audios</a>
+            <a href="products/micellaneous.html" target="_blank">Miscellaneous</a>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@" target="_blank"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+        </div>
+
+        <div>
+            <h4>Policies</h4>
+            <a href="policy.html">Cookie Policy</a>
+            <a href="policy.html">Privacy Policy</a>
+            <a href="policy.html">Trademark Policy</a>
+        </div>
+
+        <div>
+            <img src="images/logos/star.png">
+            <p>
+                <span>© <a href="https://kyb3rcipher.com" class="credits">Kyb3r Cipher</a> 2024. All rights reserved.</span>
+            </p>
+            <a href="https://github.com/kyb3rcipher/project2024" target="_blank" class="credits">
+                <p><i class="fa-brands fa-github"></i> Source Code</p>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="js/global.js"></script>
+</body>
+</html>

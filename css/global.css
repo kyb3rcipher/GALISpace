@@ -28,7 +28,7 @@ a {
     text-decoration: none;
 }
 
-select {
+select, input[type="checkbox"] {
     cursor: pointer;
 }
 
@@ -51,6 +51,24 @@ select {
 
 .chevron-link:hover::after {
     transform: translateX(.1em)
+}
+
+button {
+    font-size: 13px;
+    color: white;
+    padding: 50 50px;
+    font-weight: 900;
+    border: 3px solid #BF2E5D;
+    background-color: #BF2E5D;
+    border-radius: 20px;
+    transition-property: none;
+}
+
+button:hover {
+    transition-property: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
 
 /* NAVBAR */
