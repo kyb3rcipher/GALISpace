@@ -5,7 +5,7 @@ body.dark-mode {
 
 main {
     margin: 0;
-    height: 90vh;
+    height: 84vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,4 +75,14 @@ input[type="text"], input[type="email"], input[type="password"], input[type="sub
     border-top: 1px solid;
     vertical-align: middle;
     margin: 0 5px;
+}
+@media (max-width: 376px) {
+    .divider:before, .divider:after {
+        margin: 0 2px;
+    }
+}
+@media (max-width: 352px) {
+    .divider:before, .divider:after {
+        margin: 0 1px;
+    }
 }
