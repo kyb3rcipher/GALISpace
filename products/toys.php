@@ -1,55 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$pageTitle = "Toys";
+$pageStyles = '/css/products.css';
+include "../includes/layout_start.php"; 
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALISpace | Toys</title>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="../css/skeuos.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/products.css">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../images/logos/star.png">
-</head>
-
-<body>
-<header>
-    <div class="navbar">
-        <a href="../index.html"><img src="../images/logos/gstar.svg" class="navbar-logo"></a>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li class="dropdown-menu">
-                    <span>Products <i class="fa-solid fa-angle-down"></i></span>
-                    <div>
-                        <a href="telescopes.html">Telescopes</a>
-                        <a href="toys.html">Toys</a>
-                        <a href="glasses.html">Glasses</a>
-                        <a href="pictures.html">Picture</a>
-                        <a href="audios.html">Audios</a>
-                        <a href="micellaneous.html">Miscellaneous</a>
-                    </div>
-                </li>
-                <li><a href="../contact-us.html">Contact Us</a></li>
-                <li><a href="../about-us.html">About Us</a></li>
-                
-                <li><a href="#" class="fas fa-shopping-cart"></a></li>
-                <li id="navbar-icon"><a href="../login.html" class="fas fa-user"></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 <main>
     <h1 class="grandient-highlight-text">Toys</h1>
@@ -63,7 +17,7 @@
             <h2>Spacial Era 21340</h2>
             <div class="box">
                 <p>$70.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -76,7 +30,7 @@
             <h2>Astronaut kid costume</h2>
             <div class="box">
                 <p>$85.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -89,7 +43,7 @@
             <h2>Solar System</h2>
             <div class="box">
                 <p>$4.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -102,7 +56,7 @@
             <h2>STEM</h2>
             <div class="box">
                 <p>FREE</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -115,7 +69,7 @@
             <h2>Tent with Tunnel and Playhouse Kids Indoor</h2>
             <div class="box">
                 <p>$39.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -128,7 +82,7 @@
             <h2>Rhode Island Novelty Shuttle</h2>
             <div class="box">
                 <p>$20.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -141,7 +95,7 @@
             <h2>Astronaut Figure and Spaceship 31134</h2>
             <div class="box">
                 <p>$7.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -154,7 +108,7 @@
             <h2>Archaeology Geology Science Solar System</h2>
             <div class="box">
                 <p>$24.00</p>
-                <a href="product-site.html"><button>Buy Now</button></a>
+                <a href="product-site.php"><button>Buy Now</button></a>
             </div>
         </div>
         <!-- Product card end -->
@@ -163,62 +117,4 @@
 </main>
 
 
-<footer>
-    <div class="darkmode-switch">
-        <span>DARK</span>
-        <label class="switch">
-            <input type="checkbox" id="light-mode-toggle" name="toggle-darkmode" onchange="toggleLightMode()">
-            <div></div>
-        </label>
-        <span>LIGHT</span>
-    </div>
-    
-    <div class="footer-container">
-        <div>
-            <h4>Links</h4>
-            <a href="../index.html" target="_blank">Home</a>
-            <a href="index.html" target="_blank">Products</a>
-            <a href="../contact-us.html" target="_blank">Products</a>
-            <a href="../about-us.html" target="_blank">About Us</a>
-        </div>
-
-        <div>
-            <h4>Products</h4>
-            <a href="telescopes.html" target="_blank">Telescopes</a>
-            <a href="toys.html" target="_blank">Toys</a>
-            <a href="glasses.html" target="_blank">Glasses</a>
-            <a href="pictures.html" target="_blank">Pictures</a>
-            <a href="audios.html" target="_blank">Audios</a>
-            <a href="micellaneous.html" target="_blank">Miscellaneous</a>
-        </div>
-
-        <div>
-            <h4>Follow Us</h4>
-            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.tiktok.com/@" target="_blank"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
-        </div>
-
-        <div>
-            <h4>Policies</h4>
-            <a href="../policy.html">Cookie Policy</a>
-            <a href="../policy.html">Privacy Policy</a>
-            <a href="../policy.html">Trademark Policy</a>
-        </div>
-
-        <div>
-            <img src="../images/logos/star.png">
-            <p>
-                <span>© <a href="https://kyb3rcipher.com" class="credits">Kyb3r Cipher</a> 2024. All rights reserved.</span>
-            </p>
-            <a href="https://github.com/kyb3rcipher/project2024" target="_blank" class="credits">
-                <p><i class="fa-brands fa-github"></i> Source Code</p>
-            </a>
-        </div>
-    </div>
-</footer>
-
-<script type="text/javascript" src="../js/global.js"></script>
-</body>
-</html>
+<?php include "../includes/layout_end.php"; ?>

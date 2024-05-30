@@ -230,18 +230,18 @@ section.partners .logos-slide ul li {
 
 
 
-.dark-mode section.video-ad {
+.dark-mode section.ad-video {
     background-color: #010409;
 }
-.light-mode section.video-ad {
+.light-mode section.ad-video {
     background-color: var(--light-body-color);
 }
-section.video-ad {
+section.ad-video {
     padding: 120px 0;
     display: flex;
     align-items: center;
 }
-section.video-ad .container-video {
+section.ad-video .container-video {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -250,7 +250,7 @@ section.video-ad .container-video {
     align-items: center;
 }
 
-.dark-mode section.video-ad {
+.dark-mode section.ad-video {
     color: white;
 }
 .text-container {
@@ -271,7 +271,7 @@ section.video-ad .container-video {
 }
 
 @media (max-width: 858px) {
-    section.video-ad .container-video {
+    section.ad-video .container-video {
         display: inline;
     }
 
