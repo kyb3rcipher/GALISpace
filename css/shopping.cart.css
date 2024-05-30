@@ -46,6 +46,7 @@ hr {
 
 .product h3 {
     font-size: 25px;
+    margin: 0;
 }
 
 .product #text #price p {
@@ -107,4 +108,67 @@ hr {
 #payment-info {
     font-size: 10px;
     font-weight: 400;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 586px) {
+    .product #remove {
+        margin-right: 80px;
+    }
+}
+@media (max-width: 1122px) {
+    .product {
+        margin-right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    #products {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .product #text #price-select {
+        margin-left: 3rem;
+    }
+
+    .product #text #price {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .product #remove {
+        margin-left: auto;
+    }
+    
+    #order-summary {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    #checkout {
+        text-align: center;
+    }
+
+    .product #text hr {
+        width: 40%;
+        position: absolute !important;
+    }
+
+    #order-summary button {
+        width: 80%;
+    }
+
+    #order-summary img {
+        width: 30px;
+        margin: 0.5rem;
+    }
 }
