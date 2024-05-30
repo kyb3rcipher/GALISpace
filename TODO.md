@@ -4,7 +4,6 @@
 - Refactor styles.
 - Create product-site per each product.
 - Create the shopping-cart.
-- Create login.
 - Make funcionallity website in php.
 
 ### Extras:
