@@ -39,3 +39,9 @@ h2#learn-more {
 h2, p {
     margin-bottom: 1.3em;
 }
+
+iframe {
+    width: 350px;
+    height: 300px;
+    border: 0;
+}
