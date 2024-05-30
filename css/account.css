@@ -1,8 +1,3 @@
-body.dark-mode {
-    color: white;
-    background: #010409;
-}
-
 main {
     margin: 0;
     height: 84vh;
@@ -26,7 +21,7 @@ h1 {
     background-color: #2C303A;
 }
 .light-mode .container {
-    background-color: #e4e5ea;
+    background-color: #E4E5EA;
 }
 .container {
     text-align: center;
@@ -39,12 +34,15 @@ h1 {
 
 form label, form input {
     display: block;
-    /*width: 100%;*/
     margin-bottom: 10px;
 }
 
 form input:not(submit) {
     border-radius: 10px;
+}
+
+form input[type="submit"] {
+    margin-top: 30px;
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="submit"] {

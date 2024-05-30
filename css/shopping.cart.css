@@ -1,8 +1,3 @@
-body.dark-mode {
-    color: white;
-    background: #010409;
-}
-
 main {
     display: flex;
     margin-top: 100px;
@@ -81,6 +76,10 @@ hr {
 
 #order-summary {
     flex: 0.6;
+}
+
+#checkout {
+    display: inline-block;
 }
 
 #order-summary h2 {

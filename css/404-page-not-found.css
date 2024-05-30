@@ -5,10 +5,6 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-body.dark-mode {
-    color: white;
-    background: #010409;
-}
 
 main {
     flex: 1;
@@ -19,10 +15,16 @@ main {
     text-align: center;
 }
 
+main div span {
+    font-size: 5rem;
+    line-height: 6rem;
+    text-shadow: 0 0 7px #C3D168A2;
+}
+
 h1 {
     margin-block-end: 30px;
     font-size: 45px;
-    text-shadow: 0 0 5px #c3d168a2;
+    text-shadow: 0 0 5px #C3D168A2;
 }
 
 h2 {
@@ -36,7 +38,7 @@ main div {
 main p {
     margin-top: 3rem;
     text-align: center;
-    text-shadow: 0 0 5px #c3d168a2;
+    text-shadow: 0 0 5px #C3D168A2;
 }
 
 .particles {
@@ -54,7 +56,7 @@ main p {
     content: '';
     width: 6px;
     height: 6px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255,255,255, 0.6);
     border-radius: 0.5rem;
     filter: blur(5px);
 
@@ -115,13 +117,6 @@ main p {
     filter: blur(7px);
 }
 
-
-main div span{
-    font-size: 5rem;
-    line-height: 6rem;
-    text-shadow: 0 0 7px #c3d168a2;
-}
-
 .circle {
     user-select: none;
     -moz-user-select: none;
@@ -132,8 +127,8 @@ main div span{
     width: 6rem;
     height: 6rem;
     text-shadow: none;
-    background: #e6f1a3 radial-gradient(#f9ffd2, #ecff70);
-    color: rgba(0, 0, 0, 0);
+    background: #E6F1A3 radial-gradient(#F9FFD2, #ECFF70);
+    color: rgba(0,0,0,0);
     border-radius: 50%;
     box-shadow: 0 0 7px #e7f1a3a2;
 }
@@ -147,9 +142,9 @@ main div span{
     width: 10rem;
     height: 4rem;
     border-radius: 50%;
-    border: 2px solid #fafafa;
-    border-top: 0px solid #fafafa;
-    border-bottom: 4px solid #fafafa;
+    border: 2px solid #FAFAFA;
+    border-top: 0px solid #FAFAFA;
+    border-bottom: 4px solid #FAFAFA;
     z-index: 2
 }
 .circle:before {

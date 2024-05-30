@@ -2,10 +2,6 @@ body.light-mode {
     color: black;
     background: var(--light-body-color);
 }
-body.dark-mode {
-    color: white;
-    background: black;
-}
 
 main {
     padding: 50px;
