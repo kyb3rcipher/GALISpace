@@ -1,11 +1,12 @@
 <?php
 function connectToDatabase() {
-    $db_host = "sql200.infinityfree.com";
-    $db_username = "if0_36647081";
-    $db_password = "nmT0QyUZksK";
+    $host = "sql200.infinityfree.com";
+    $username = "if0_36647081";
+    $password = "nmT0QyUZksK";
+    $database = "if0_36647081_database";
 
-    if (isset($db_host, $db_username, $db_password)) {
-        $connection = new mysqli($db_host, $db_username, $db_password, "database");
+    if (isset($host, $username, $password)) {
+        $connection = new mysqli($host, $username, $password, $database);
     } else {
         $connection = new mysqli("localhost", "root", "", "database");
     }
