@@ -8,24 +8,24 @@ include "includes/layout_start.php";
 <main>
     <h1 class="grandient-highlight-text">Register</h1>
     <div class="container">
-        <form>
+        <form action="sql/register_user.php" method="POST">
             <label>Username</label>
-            <input type="text" placeholder="Username">
+            <input type="text" id="username" name="username" placeholder="Username" required>
             
             <label>Email</label>
-            <input type="email" placeholder="example@galispace.com">
+            <input type="email" name="email" placeholder="example@galispace.com" required>
 
             <label>Password:</label>
-            <input type="password" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <label>Confirm password:</label>
-            <input type="password" placeholder="Confirm password">
+            <input type="password" id="confirm-password" placeholder="Confirm password" required>
 
             <input type="submit" class="red-button" value="Register">
         </form>
         
         <div class="divider"><span>OR</span></div>
         
-        You have an account? <a href="login.html">Login</a>
+        You have an account? <a href="login.php">Login</a>
     </div>
 </main>
 
