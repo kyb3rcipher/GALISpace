@@ -23,6 +23,18 @@
                 <li><a href="/contact-us.php">Contact Us</a></li>
                 <li><a href="/about-us.php">About Us</a></li>
                 
+                <?php if(isset($_COOKIE['username']) && $_COOKIE['username'] === 'admin'): ?>
+                <li class="dropdown-menu">
+                    <span>Admin <i class="fa-solid fa-angle-down"></i></span>
+                    <div>
+                        <a href="/admin/accounts.php">Accounts</a>
+                        <a href="#">Products</a>
+                        <a href="#">Orders</a>
+                        <a href="#">Messages</a>
+                    </div>
+                </li>
+                <?php endif; ?>
+                
                 <li><a href="/shopping.cart.php" class="fas fa-shopping-cart"></a></li>
                 <li id="navbar-icon"><a href="/login.php" class="fas fa-user"></a></li>
             </ul>

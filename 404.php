@@ -1,4 +1,3 @@
-<?php include '../includes/header.html'; ?>
 <?php
 $pageTitle = "Page not Found";
 $pageStyles = 'css/404-page-not-found.css';
