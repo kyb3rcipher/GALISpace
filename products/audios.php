@@ -9,59 +9,28 @@ include "../includes/layout_start.php";
     <h1 class="grandient-highlight-text">Audios</h1>
     
     <div class="products">
-        <!-- Product card start -->
-        <div class="card">
-            <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
-            <audio controls><source src="../audios/black-hole.mp3" type="audio/mpeg"></audio>
-            <h4>Audio</h4>
-            <h2>Black Hole</h2>
-            <div class="box">
-                <p>$30.00</p>
-                <a href="product-site.php"><a href="product-site.php"><button>Buy Now</button></a></a>
-            </div>
-        </div>
-        <!-- Product card end -->
+        <?php
+        require_once '../sql/database.php';
+        $conn = connectToDatabase();
 
-        <!-- Product card start -->
-        <div class="card">
-            <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
-            <audio controls><source src="../audios/the-weeknd-for-dolby-atmos.mp3" type="audio/mpeg"></audio>
-            <h4>Dolby Atmos Audio</h4>
-            <h2>The Weeknd</h2>
-            <div class="box">
-                <p>$70.00</p>
-                <a href="product-site.php"><button>Buy Now</button></a>
+        $result = mysqli_query($conn, "SELECT * FROM products WHERE type = 'Audios'");
+        while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+            <div class="card">
+                <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
+                <audio controls><source src="<?php echo $row['media'] ?>" type="audio/mpeg"></audio>
+                <h4><?php echo $row['model']; ?></h4>
+                <h2><?php echo $row['name']; ?></h2>
+                <div class="box">
+                    <p>$<?php echo $row['price']; ?></p>
+                    <a href="product-site.php"><button>Buy Now</button></a>
+                </div>
             </div>
-        </div>
-        <!-- Product card end -->
-        
-        <!-- Product card start -->
-        <div class="card">
-            <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
-            <audio controls><source src="../audios/space-universe-by-boody-mary.mp3" type="audio/mpeg"></audio>
-            <h4>Audio</h4>
-            <h2>Space Universe</h2>
-            <div class="box">
-                <p>$80.00</p>
-                <a href="product-site.php"><button>Buy Now</button></a>
-            </div>
-        </div>
-        <!-- Product card end -->
+            <?php
+        }
 
-        <!-- Product card start -->
-        <!-- https://www.youtube.com/watch?v=H-Ci_YwfH04 -->
-        <div class="card">
-            <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
-            <audio controls><source src="../audios/hubble-deep-space.mp3" type="audio/mpeg"></audio>
-            <h4>Audio</h4>
-            <h2>Hubble in deep space</h2>
-            <div class="box">
-                <p>$80.00</p>
-                <a href="product-site.php"><button>Buy Now</button></a>
-            </div>
-        </div>
-        <!-- Product card end -->
-        
+        mysqli_close($conn);
+        ?>
     </div>
 </main>
 
