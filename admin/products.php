@@ -25,9 +25,10 @@ include "../includes/layout_start.php";
         <th>ID</th>
         <th>Type</th>
         <th>Name</th>
+        <th>Model</th>
         <th>Description</th>
         <th>Price</th>
-        <th>Image</th>
+        <th>Media</th>
         <th>Actions</th>
     </tr>
 
@@ -35,7 +36,7 @@ include "../includes/layout_start.php";
     require_once '../sql/database.php';
     $conn = connectToDatabase();
 
-    $sql = "SELECT id, name, description, price, image, type FROM products";
+    $sql = "SELECT id, name, model, description, price, media, type FROM products";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -53,12 +54,14 @@ include "../includes/layout_start.php";
                 echo '</select></td>';
                 
                 echo '<td><input type="text" name="name" value="' . htmlspecialchars($row["name"]) . '"></td>';
+
+                echo '<td><input type="text" name="model" value="' . htmlspecialchars($row["model"]) . '"></td>';
                 
                 echo '<td><textarea name="description">' . htmlspecialchars($row["description"]) . '</textarea></td>';
                 
-                echo '<td><input type="text" name="price" value="' . htmlspecialchars($row["price"]) . '"></td>';
+                echo '<td><input type="number" name="price" value="' . htmlspecialchars($row["price"]) . '"></td>';
                 
-                echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="' . htmlspecialchars($row["image"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
+                echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="' . htmlspecialchars($row["media"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
                 echo '<input type="file" name="image" id="image-' . htmlspecialchars($row["id"]) . '" accept="image/*" onchange="previewImage(event, ' . htmlspecialchars($row["id"]) . ')">';
 
                 echo '<td><input type="submit" class="green-button" id="update-button" value="Update"></input></form> <button class="red-button" data-id="' . htmlspecialchars($row["id"]) . '" onclick="deleteProduct(this)">Delete</button><input type="hidden" name="id" value="1"></td>';

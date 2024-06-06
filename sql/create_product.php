@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile);
     }
 
-    $sql = "INSERT INTO products (name, description, price, type, image) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO products (name, description, price, type, media) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ssdss", $name, $description, $price, $type, $uploadFile);
     
