@@ -198,6 +198,19 @@ input.magenta-button.active[type="submit"], input.magenta-button[type="submit"]:
     box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
+.green-button, button.green-button, .checktext input + span.green-button, .green-button.blue-button, input.green-button[type="button"], input.green-button[type="submit"], input.green-button[type="reset"] {
+    color: white;
+    font-weight: bold;
+    background: #19A187;
+    box-shadow: 0 0 0.5em rgba(25, 161, 135, 0.7), 0 0 transparent, inset 0 -5px 0 rgba(0, 0, 0, 0.05), inset 0 2px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 6px 6px 8px 8px;
+    transition-property: box-shadow, border-radius;
+}
+.green-button.active, .green-button:active, button.green-button.active, button.green-button:active, input.green-button.active[type="button"], input.green-button[type="button"]:active, input.green-button.active[type="submit"], input.green-button[type="submit"]:active, input.green-button.active[type="reset"], input.green-button[type="reset"]:active {
+    background: #19A187;
+    border-radius: 6px;
+    box-shadow: 0 0 transparent, 0 0 transparent, inset 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+}
 hr {
     width: 50%;
     height: 7px;

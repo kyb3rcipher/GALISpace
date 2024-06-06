@@ -28,7 +28,7 @@
                     <span>Admin <i class="fa-solid fa-angle-down"></i></span>
                     <div>
                         <a href="/admin/accounts.php">Accounts</a>
-                        <a href="#">Products</a>
+                        <a href="/admin/products.php">Products</a>
                         <a href="#">Orders</a>
                         <a href="#">Messages</a>
                     </div>

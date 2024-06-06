@@ -41,3 +41,35 @@ th {
     background-color: #2e303d;
     color: white;
 }
+
+input[type="submit"] {
+    margin-right: 10px;
+}
+
+#create-product input[type="text"], #create-product select {
+    margin-right: 10px;
+}
+
+.product-row input[type="file"] {
+    display: none;
+}
+
+.product-row #label-for-image {
+    cursor: pointer;
+}
+
+.product-row textarea {
+    height: 45px;
+    resize: vertical;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #CCC;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-right: 10px;
+}

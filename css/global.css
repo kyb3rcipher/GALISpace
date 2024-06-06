@@ -34,11 +34,15 @@ a {
     text-decoration: none;
 }
 
+input, textarea {
+    border-radius: 10px;
+}
+
 select, input[type="checkbox"] {
     cursor: pointer;
 }
 
-button {
+button, .button {
     font-size: 13px;
     color: white;
     padding: 50 50px;
@@ -46,6 +50,7 @@ button {
     border: 3px solid #BF2E5D;
     background-color: #BF2E5D;
     border-radius: 20px;
+    box-shadow: none !important;
     transition-property: none;
 }
 button:hover {
