@@ -9,7 +9,7 @@ include "includes/layout_start.php";
     <h1 class="grandient-highlight-text">Contact Us</h1>
 
     <div id="message-form">
-            <form action="#" method="post">
+            <form action="sql/contact_form.php" method="POST">
                 <fieldset>
                 <legend>Write a message</legend>
                     <div id="container-form">
