@@ -78,6 +78,9 @@ include "../includes/layout_start.php";
     <label for="name">Name:</label>
     <input type="text" name="name" required>
 
+    <label for="name">Model:</label>
+    <input type="text" name="model" required>
+
     <label for="description">Description:</label>
     <input type="text" name="description" required>
 
