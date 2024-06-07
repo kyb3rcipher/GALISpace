@@ -36,7 +36,7 @@
                 <?php endif; ?>
                 
                 <?php if(isset($_COOKIE['username'])): ?>
-                <li><a href="/shopping.cart.php" class="fas fa-shopping-cart"></a></li>
+                <li><a href="/shopping-cart.php" class="fas fa-shopping-cart"></a></li>
                 <li id="navbar-icon" class="dropdown-menu">
                     <span><i class="fas fa-user"></i> <i class="fa-solid fa-angle-down"></i></span>
                     <div>
