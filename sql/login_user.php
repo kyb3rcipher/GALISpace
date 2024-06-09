@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $storedPassword = $row["password"];
         
         if (password_verify($password, $storedPassword)) {
-            setcookie("username", $row["username"], time() + (120), "/");
+            setcookie("username", $row["username"], time() + (3600), "/");
 
             header("Location: /index.php?alert=login_success");
         } else {
