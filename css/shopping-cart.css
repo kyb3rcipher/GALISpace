@@ -78,6 +78,10 @@ hr {
     flex: 0.6;
 }
 
+#total {
+    font-size: 14px;
+}
+
 #checkout {
     display: inline-block;
 }
@@ -109,7 +113,6 @@ hr {
     font-weight: 400;
 }
 
-/* Estilos para dispositivos móviles */
 @media (max-width: 586px) {
     .product #remove {
         margin-right: 80px;

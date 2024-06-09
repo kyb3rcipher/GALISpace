@@ -7,212 +7,50 @@ include "includes/layout_start.php";
 
 <main>
     <div id="products">
-        <input type="checkbox"> <h2 id="select-all">Select all (7)</h2>
+        <input type="checkbox" onchange="selectAll(this)"> <h2 id="select-all">Select all (7)</h2></i>
         <hr id="select-all-divider">
 
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/toys/LEGO-21340.jpg">
-            
-            <div id="text">
-                <p>Toy</p>
-                <h3>Spacial Era 21340</h3>
-                <div id="price-select">
-                    <p id="price">USD $70.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
+        <?php
+        session_start();
+
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+
+            foreach ($_SESSION['cart'] as $product_id => $product) {
+                ?>
+                <div class="product">
+                    <input type="checkbox" class="product-checkbox" onchange="updateTotal()" data-price="<?php echo $product['price']; ?>">
+                    <img src="<?php echo $product['media']; ?>" alt="<?php echo $product['name']; ?>">
+                    
+                    <div id="text">
+                        <p><?php echo $product['type']; ?></p>
+                        <h3><?php echo $product['name']; ?></h3>
+                        <div id="price-select">
+                            <p id="price">USD $<?php echo number_format($product['price'], 2); ?></p>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <hr>
+                    </div>
+                    
+                    <i id="remove" class="fa-solid fa-trash" onclick="removeProduct(this)"></i>
                 </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-        
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/telescopes/Meade-Telescope-AC-90-900-Polaris-EQ.jpg">
+                <?php
+            }
             
-            <div id="text">
-                <p>Telescope</p>
-                <h3>Meade AC 90/900 Polaris</h3>
-                <div id="price-select">
-                    <p id="price">USD $349.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/glasses/eclipse-glasses-classic.jpg">
-            
-            <div id="text">
-                <p>Glasses</p>
-                <h3>Eclipse glasses classic</h3>
-                <div id="price-select">
-                    <p id="price">USD $30.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/pictures/GSFC_20171208_Archive_e001872.jpg">
-            
-            <div id="text">
-                <p>Picuture</p>
-                <h3>Telescopes Turbulent</h3>
-                <div id="price-select">
-                    <p id="price">USD $8.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/toys/Projector.jpg">
-            
-            <div id="text">
-                <p>Toy</p>
-                <h3>Solar System</h3>
-                <div id="price-select">
-                    <p id="price">USD $4.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/micellaneous/binoculars.jpg">
-            
-            <div id="text">
-                <p>Miscellaneous</p>
-                <h3>Binoculars Prismatics (8x)</h3>
-                <div id="price-select">
-                    <p id="price">USD $24.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-
-        <div class="product">
-            <input type="checkbox">
-            <img src="images/products/toys/LEGO-31134.jpg">
-            
-            <div id="text">
-                <p>Toy</p>
-                <h3>Spaceship 31134</h3>
-                <div id="price-select">
-                    <p id="price">USD $7.00</p>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-
-                <hr>
-            </div>
-
-            <i id="remove" class="fa-solid fa-trash"></i>
-        </div>
-        
+        } else {
+            echo "<p>There are no products in the cart.</p>";
+        }
+        ?>
 
     </div>
 
@@ -220,8 +58,8 @@ include "includes/layout_start.php";
         <div id="checkout">
             <h2>Order Summary</h2>
 
-            Total (7 items) USD$492.00
-            <button>Checkout (7)</button>
+            <p id="total">Total (<span id="total-items">0</span> items) USD$<span id="total-price">0.00</span></p>
+            <button>Checkout (<span id="checkout-items">0</span>)</button>
             <p id="payment-info"><i class="fa-solid fa-circle-info"></i> Item availability and pricing are not guaranteed until payment is final.</p>
         </div>
         
@@ -257,4 +95,7 @@ include "includes/layout_start.php";
 </main>
 
 
-<?php include "includes/layout_end.php"; ?>
+<?php
+$pageScripts = '/js/shopping-cart.js';
+include "includes/layout_end.php";
+?>
