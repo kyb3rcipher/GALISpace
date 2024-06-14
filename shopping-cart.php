@@ -18,7 +18,7 @@ include "includes/layout_start.php";
             foreach ($_SESSION['cart'] as $product_id => $product) {
                 ?>
                 <div class="product">
-                    <input type="checkbox" class="product-checkbox" onchange="updateTotal()" data-price="<?php echo $product['price']; ?>">
+                    <input type="checkbox" class="product-checkbox" onchange="updateTotal()" data-price="<?php echo $product['price']; ?>" data-product-id="<?php echo $product_id; ?>">
                     <img src="<?php echo $product['media']; ?>" alt="<?php echo $product['name']; ?>">
                     
                     <div id="text">
@@ -59,7 +59,11 @@ include "includes/layout_start.php";
             <h2>Order Summary</h2>
 
             <p id="total">Total (<span id="total-items">0</span> items) USD$<span id="total-price">0.00</span></p>
-            <button>Checkout (<span id="checkout-items">0</span>)</button>
+            <form id="checkout-form" action="sql/process_order.php" method="POST" onsubmit="checkout()">
+                <input type="hidden" name="selected_products" id="selected-products">
+                <button type="submit">Checkout (<span id="checkout-items">0</span>)</button>
+            </form>
+
             <p id="payment-info"><i class="fa-solid fa-circle-info"></i> Item availability and pricing are not guaranteed until payment is final.</p>
         </div>
         
@@ -95,7 +99,8 @@ include "includes/layout_start.php";
 </main>
 
 
+
 <?php
-$pageScripts = '/js/shopping-cart.js';
+$pageScripts = 'js/shopping-cart.js';
 include "includes/layout_end.php";
 ?>

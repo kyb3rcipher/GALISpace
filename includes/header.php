@@ -29,7 +29,7 @@
                     <div>
                         <a href="/admin/accounts.php">Accounts</a>
                         <a href="/admin/products.php">Products</a>
-                        <a href="#">Orders</a>
+                        <a href="/admin/orders.php">Orders</a>
                         <a href="/admin/messages.php">Messages</a>
                     </div>
                 </li>

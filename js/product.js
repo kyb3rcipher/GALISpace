@@ -59,11 +59,11 @@ const handleInfiniteScroll = () => {
     if(!container.matches(":hover")) autoScroll();
 }
 
-const autoScroll = () => {
+/*const autoScroll = () => {
     if(window.innerWidth < 800 || !isAutomatic) return;
     timerId = setTimeout(() => slider.scrollLeft += initialCardWidth, 2500);
 }
-autoScroll();
+autoScroll();*/
 
 slider.addEventListener("mousedown", startDrag);
 slider.addEventListener("mousemove", duringDrag);

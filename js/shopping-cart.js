@@ -53,3 +53,19 @@ function updateTotal() {
     totalPrice.textContent = total.toFixed(2);
     checkoutItems.textContent = items;
 }
+
+function checkout() {
+    const selectedProducts = [];
+    
+    document.querySelectorAll('.product-checkbox:checked').forEach(function(checkbox) {
+        const product = checkbox.closest('.product');
+        const productDetails = {
+            id: checkbox.dataset.productId,
+            quantity: product.querySelector('select').value,
+        };
+        selectedProducts.push(productDetails);
+    });
+
+    // Convert to JSON
+    document.getElementById('selected-products').value = JSON.stringify(selectedProducts);
+}

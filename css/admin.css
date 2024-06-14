@@ -63,6 +63,23 @@ input[type="submit"] {
     resize: vertical;
 }
 
+.product-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.product-item img {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.product-item p {
+    margin: 5px 0;
+}
+
 .custom-file-upload input[type="file"] {
     display: none;
 }
