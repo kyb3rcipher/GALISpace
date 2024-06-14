@@ -1,4 +1,4 @@
-# project 2024
+# GALISpace
 School project 2024 4th grade of high school programming.
 
 ## Credits
