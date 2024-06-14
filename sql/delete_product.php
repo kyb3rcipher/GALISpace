@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query("SELECT media FROM products WHERE id='" . $id . "'");
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $image = "../images/" . $row['type'] . $row['media']
+        $image = "../images/" . $row['type'] . $row['media'];
         
         if (file_exists($image)) {
             unlink($image);

@@ -18,7 +18,7 @@ include "../includes/layout_start.php";
             ?>
             <div class="card">
                 <video src="../videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>
-                <audio controls><source src="<?php echo $row['media'] ?>" type="audio/mpeg"></audio>
+                <audio controls><source src="<?php echo "../" . $row['media'] ?>" type="audio/mpeg"></audio>
                 <h4><?php echo $row['model']; ?></h4>
                 <h2><?php echo $row['name']; ?></h2>
                 <div class="box">

@@ -17,7 +17,7 @@ include "../includes/layout_start.php";
         while ($row = mysqli_fetch_assoc($result)) {
             ?>
             <div class="card">
-                <img src="<?php echo $row['media'] ?>">
+            <img src="<?php echo "../" . $row['media'] ?>">
                 <h4><?php echo $row['model']; ?></h4>
                 <h2><?php echo $row['name']; ?></h2>
                 <div class="box">
