@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 07, 2024 at 04:42 AM
+-- Generation Time: Jun 14, 2024 at 06:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,6 +32,19 @@ CREATE TABLE `messages` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `products` text NOT NULL,
+  `created` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -86,10 +99,10 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `model`, `type`, `
 (29, 'Boeing Crew Flight Test Astronaut', '', '65', 'Team picture', 'Pictures', 'images/products/pictures/KSC-20240506-PH-KLS01_0195.jpg'),
 (30, 'Black Hole in an unlikely place', '', '9.00', 'Picture', 'Pictures', 'images/products/pictures/behemoth-black-hole-found-in-an-unlikely-place_26209716511.jpg'),
 (31, 'Neutron Stars Rip Each Other Apart', '', '8.00', 'Picture', 'Pictures', 'images/products/pictures/GSFC_20171208_Archive_e001101.jpg'),
-(32, 'Black Hole', '', '30', 'Audio', 'Audios', '../audios/black-hole.mp3'),
-(33, 'The Weeknd', '', '70.00', 'Dolby Atmos Audio', 'Audios', '../audios/the-weeknd-for-dolby-atmos.mp3'),
-(34, 'Space Universe', '', '80.00', 'Audio', 'Audios', '../audios/space-universe-by-boody-mary.mp3'),
-(35, 'Hubble in deep space', '', '80.00', 'Audio', 'Audios', '../audios/hubble-deep-space.mp3'),
+(32, 'Black Hole', '', '30', 'Audio', 'Audios', 'audios/black-hole.mp3'),
+(33, 'The Weeknd', '', '70.00', 'Dolby Atmos Audio', 'Audios', 'audios/the-weeknd-for-dolby-atmos.mp3'),
+(34, 'Space Universe', '', '80.00', 'Audio', 'Audios', 'audios/space-universe-by-boody-mary.mp3'),
+(35, 'Hubble in deep space', '', '80.00', 'Audio', 'Audios', 'audios/hubble-deep-space.mp3'),
 (36, 'Binoculars Prismatics (8x)', '', '23.00', 'Prismatics', 'Miscellaneous', 'images/products/micellaneous/binoculars.jpg'),
 (37, 'Night Vision', '', '48', 'Glasses', 'Miscellaneous', 'images/products/micellaneous/night-vision.jpg');
 
@@ -110,21 +123,34 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `email`, `password`) VALUES
-('admin', 'admin@galispace.com', '$2y$10$7KRo0y824TQ4QThsrnPnP.jXAvqMoZgVJruT2WTW.wrrQAveYDA6.');
+('admin', 'admin@galispace.com', '$2y$10$5BmE3EGS66OR23h/ssXwSORSDR8Z/7TkzNuDKztVZv5TpM/0muZzu');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
