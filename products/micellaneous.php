@@ -22,7 +22,7 @@ include "../includes/layout_start.php";
                 <h2><?php echo $row['name']; ?></h2>
                 <div class="box">
                     <p>$<?php echo $row['price']; ?></p>
-                    <a href="product-site.php"><button>Buy Now</button></a>
+                    <a href="product-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
                 </div>
             </div>
             <?php

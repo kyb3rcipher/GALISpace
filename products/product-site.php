@@ -1,21 +1,28 @@
 <?php
 $pageTitle = "Example Product Site";
 $pageStyles = '/css/product.css';
-include "../includes/layout_start.php"; 
+include "../includes/layout_start.php";
+
+require_once '../sql/database.php';
+$conn = connectToDatabase();
+
+$productID = $_GET['product_id'];
+
+$product = $conn->query("SELECT * FROM products WHERE id='$productID'")->fetch_assoc();
 ?>
 
 <main>
     <div id="product-container">
         <div id="product-container-main">
-            <img src="../images/products/telescopes/Bresser-Telescope-AC-90-900-Messier-EXOS-1.jpg">
+            <img src="../<?php echo $product['media']; ?>">
 
             <div id="left-container">
-                <h2>Telescope Achromat Bresser AC 90/900 EXOS-1</h2>
+                <h2><?php echo $product['name']; ?></h2>
                 <div id="stars">
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
 
-                <p id="price">USD $386.00</p>
+                <p id="price">USD $<?php echo $product['price']; ?></p>
                 
 
                 <div id="description">Description:
@@ -23,7 +30,7 @@ include "../includes/layout_start.php";
                 </div>
 
                 <label for="quantity-select">Qty:</label>
-                <select name="quantity-select" id="quantity-select">
+                <select name="quantity-select" id="quantity-select" onchange>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -36,8 +43,15 @@ include "../includes/layout_start.php";
                     <option value="10">10</option>
                 </select>
                 
-                <button id="buy-button" class="red-button">Add to cart</button>
-                
+                <form action="add_product_to_cart.php" method="POST">
+                    <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+                    <input type="hidden" name="product_type" value="<?php echo $product['type']; ?>">
+                    <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
+                    <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
+                    <input type="hidden" name="product_media" value="<?php echo $product['media']; ?>">
+                    <button type="submit" id="buy-button" class="red-button">Add to cart</button>
+                </form>
+
                 <hr id="return-separation">
 
                 <div id="return">

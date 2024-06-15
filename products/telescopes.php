@@ -21,16 +21,7 @@ include "../includes/layout_start.php";
                 <h2><?php echo $row['name']; ?></h2>
                 <div class="box">
                     <p>$<?php echo $row['price']; ?></p>
-
-                    <!-- Form for send product information to cart js-session -->
-                    <form action="add_product_to_cart.php" method="POST">
-                        <input type="hidden" name="product_id" value="<?php echo $row['id']; ?>">
-                        <input type="hidden" name="product_type" value="<?php echo $row['type']; ?>">
-                        <input type="hidden" name="product_name" value="<?php echo $row['name']; ?>">
-                        <input type="hidden" name="product_price" value="<?php echo $row['price']; ?>">
-                        <input type="hidden" name="product_media" value="<?php echo $row['media']; ?>">
-                        <button type="submit">Add</button>
-                    </form>
+                    <a href="product-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
                 </div>
             </div>
             <?php

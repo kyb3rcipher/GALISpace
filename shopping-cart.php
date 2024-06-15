@@ -16,7 +16,7 @@ include "includes/layout_start.php";
         if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
             foreach ($_SESSION['cart'] as $product_id => $product) {
-                ?>
+        ?>
                 <div class="product">
                     <input type="checkbox" class="product-checkbox" onchange="updateTotal()" data-price="<?php echo $product['price']; ?>" data-product-id="<?php echo $product_id; ?>">
                     <img src="<?php echo $product['media']; ?>" alt="<?php echo $product['name']; ?>">
@@ -25,7 +25,7 @@ include "includes/layout_start.php";
                         <p><?php echo $product['type']; ?></p>
                         <h3><?php echo $product['name']; ?></h3>
                         <div id="price-select">
-                            <p id="price">USD $<?php echo number_format($product['price'], 2); ?></p>
+                            <p id="price">USD $<?php echo $product['price']; ?></p>
                             <select>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -44,7 +44,7 @@ include "includes/layout_start.php";
                     
                     <i id="remove" class="fa-solid fa-trash" onclick="removeProduct(this)"></i>
                 </div>
-                <?php
+        <?php
             }
             
         } else {
