@@ -8,6 +8,7 @@ include "../includes/layout_start.php";
 <main>
 <h1 class="grandient-highlight-text">Messages Manager</h1>
 
+<?php if(isset($_COOKIE['username']) && $_COOKIE['username'] === 'admin'): ?>
 <table>
     <tr>
         <th>Type</th>
@@ -45,6 +46,10 @@ include "../includes/layout_start.php";
     $conn->close();
     ?>
 </table>
+
+<?php else: ?>
+    <h2>You don't have permissions for this</h2>
+<?php endif; ?>
 </main>
 
 

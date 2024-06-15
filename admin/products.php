@@ -7,6 +7,7 @@ include "../includes/layout_start.php";
 <main>
 <h1 class="grandient-highlight-text">Products Manager</h1>
 
+<?php if(isset($_COOKIE['username']) && $_COOKIE['username'] === 'admin'): ?>
 <div>
 <span>Filter:</span>
 <select name="filter" onchange="filterProducts(this.value)">
@@ -61,7 +62,7 @@ include "../includes/layout_start.php";
                 
                 echo '<td><input type="number" name="price" value="' . htmlspecialchars($row["price"]) . '"></td>';
                 
-                echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="' . htmlspecialchars($row["media"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
+                echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="../' . htmlspecialchars($row["media"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
                 echo '<input type="file" name="image" id="image-' . htmlspecialchars($row["id"]) . '" accept="image/*" onchange="previewImage(event, ' . htmlspecialchars($row["id"]) . ')">';
 
                 echo '<td><input type="submit" class="green-button" id="update-button" value="Update"></input></form> <button class="red-button" data-id="' . htmlspecialchars($row["id"]) . '" onclick="deleteProduct(this)">Delete</button><input type="hidden" name="id" value="1"></td>';
@@ -104,6 +105,10 @@ include "../includes/layout_start.php";
 
     <input type="submit" class="button">
 </form>
+
+<?php else: ?>
+    <h2>You don't have permissions for this</h2>
+<?php endif; ?>
 </main>
 
 
