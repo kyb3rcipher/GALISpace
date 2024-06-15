@@ -23,7 +23,12 @@ include "../includes/layout_start.php";
                 <h2><?php echo $row['name']; ?></h2>
                 <div class="box">
                     <p>$<?php echo $row['price']; ?></p>
-                    <a href="product-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
+                                        
+                    <?php if(isset($_COOKIE['username'])): ?>
+                        <a href="product-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
+                    <?php else: ?>
+                        <button style="cursor: not-allowed;" onclick="notLogged()">Buy Now</button>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php

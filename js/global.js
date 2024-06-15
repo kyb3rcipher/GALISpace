@@ -58,3 +58,7 @@ function toggleLightMode() {
         disableLightMode();
     }
 }
+
+function notLogged() {
+    alert("You need to log in for this!");
+}
