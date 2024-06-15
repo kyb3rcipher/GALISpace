@@ -9,7 +9,7 @@ include "includes/layout_start.php";
     <h1>Policy</h1>
     <p>This is a demo site designed solely to test the functionality of the website; therefore, it does not constitute a real store and none of the products offered are authentic. Political topics are not addressed. However, it is important to note that the source code of this site is open source and can be found at the following link:</p>
 
-    <p><a href="https://github.com/kyb3rcipher/project2024/">Source Code</a></p>
+    <p><a href="https://github.com/kyb3rcipher/GALISpace/">Source Code</a></p>
 
     <p>Now, regarding the license under which the software is distributed, here are the key points:</p>
     <ol>
