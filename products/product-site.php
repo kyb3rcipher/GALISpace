@@ -29,8 +29,11 @@ $product = $conn->query("SELECT * FROM products WHERE id='$productID'")->fetch_a
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae voluptatum asperiores quas eligendi laborum aliquam dolore repellat dolorem officiis ullam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur dolorum repellat eaque minima sit officia sed repudiandae laborum ut ea.</p>
                 </div>
 
+                <form action="add_product_to_cart.php" method="POST">
+
+
                 <label for="quantity-select">Qty:</label>
-                <select name="quantity-select" id="quantity-select" onchange>
+                <select name="product_quantity" id="quantity-select">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -43,13 +46,15 @@ $product = $conn->query("SELECT * FROM products WHERE id='$productID'")->fetch_a
                     <option value="10">10</option>
                 </select>
                 
-                <form action="add_product_to_cart.php" method="POST">
+                
                     <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
                     <input type="hidden" name="product_type" value="<?php echo $product['type']; ?>">
                     <input type="hidden" name="product_name" value="<?php echo $product['name']; ?>">
                     <input type="hidden" name="product_price" value="<?php echo $product['price']; ?>">
                     <input type="hidden" name="product_media" value="<?php echo $product['media']; ?>">
-                    <button type="submit" id="buy-button" class="red-button">Add to cart</button>
+                
+                <button type="submit" id="buy-button" class="red-button">Add to cart</button>
+
                 </form>
 
                 <hr id="return-separation">

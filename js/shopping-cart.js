@@ -8,6 +8,34 @@ function selectAll(selectAllCheckbox) {
     updateTotal();
 }
 
+function changeQuantity(product) {
+    let productId = product.closest('.product').querySelector('.product-checkbox').dataset.productId;
+    let newQuantity = product.value;
+    
+    fetch('../sql/update_cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            product_id: productId,
+            quantity: newQuantity
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log(`Quantity updated to ${newQuantity} for product ID: ${productId}`);
+            updateTotal(); // Update the total price and items count
+        } else {
+            console.error('Failed to update quantity.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
 function removeProduct(icon) {
     const productDiv = icon.closest('.product');
 
