@@ -62,8 +62,12 @@ include "../includes/layout_start.php";
                 
                 echo '<td><input type="number" name="price" value="' . htmlspecialchars($row["price"]) . '"></td>';
                 
-                echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="../' . htmlspecialchars($row["media"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
-                echo '<input type="file" name="image" id="image-' . htmlspecialchars($row["id"]) . '" accept="image/*" onchange="previewImage(event, ' . htmlspecialchars($row["id"]) . ')">';
+                if(getimagesize("../" . $row["media"])) {
+                    echo '<td><label for="image-' . htmlspecialchars($row["id"]) . '" id="label-for-image"><img id="img-' . htmlspecialchars($row["id"]) . '" src="../' . htmlspecialchars($row["media"]) . '" alt="' . htmlspecialchars($row["name"]) . '" width="50"></label>';
+                    echo '<input type="file" name="image" id="image-' . htmlspecialchars($row["id"]) . '" accept="image/*" onchange="previewImage(event, ' . htmlspecialchars($row["id"]) . ')">';
+                } else {
+                    echo '<td><audio controls><source src="../' . $row['media'] . '" type="audio/mpeg"></audio></td>';
+                }
 
                 echo '<td><input type="submit" class="green-button" id="update-button" value="Update"></input></form> <button class="red-button" data-id="' . htmlspecialchars($row["id"]) . '" onclick="deleteProduct(this)">Delete</button><input type="hidden" name="id" value="1"></td>';
             echo "</tr>";
