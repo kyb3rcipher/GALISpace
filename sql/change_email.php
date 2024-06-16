@@ -14,6 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($stmt->execute()) {
                 echo "success";
+
+                if (isset($_GET["from_account"])) {
+                    header("Location: " . $_SERVER['HTTP_REFERER']);
+                }
             } else {
                 echo "error: " . $stmt->error;
             }

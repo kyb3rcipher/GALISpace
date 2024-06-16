@@ -13,6 +13,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             echo "success";
+
+            if (isset($_GET["from_account"])) {
+                setcookie("username", $newUsername, time() + 3600, "/");
+                header("Location: " . $_SERVER['HTTP_REFERER']);
+            }
         } else {
             echo "error";
         }

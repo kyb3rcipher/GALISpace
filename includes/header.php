@@ -40,7 +40,7 @@
                 <li id="navbar-icon" class="dropdown-menu">
                     <span><i class="fas fa-user"></i> <i class="fa-solid fa-angle-down"></i></span>
                     <div>
-                        <a href="#">Account</a>
+                        <a href="/account.php">Account</a>
                         <a href="../sql/logout_user.php">Logout</a>
                     </div>
                 </li>
