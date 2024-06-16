@@ -21,6 +21,10 @@ main {
     border-radius: 10px;
 }
 
+#product-container-main audio {
+    margin: 10px 0;
+}
+
 #product-container-main #left-container h2 {
     margin-top: 35px;
     font-size: 23px;

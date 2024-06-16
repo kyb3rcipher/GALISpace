@@ -25,7 +25,7 @@ include "../includes/layout_start.php";
                     <p>$<?php echo $row['price']; ?></p>
                                         
                     <?php if(isset($_COOKIE['username'])): ?>
-                        <a href="product-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
+                        <a href="product-audio-site.php?product_id=<?php echo $row['id'] ?>"><button>Buy Now</button></a>
                     <?php else: ?>
                         <button style="cursor: not-allowed;" onclick="notLogged()">Buy Now</button>
                     <?php endif; ?>

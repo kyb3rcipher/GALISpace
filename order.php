@@ -42,7 +42,12 @@ include "includes/layout_start.php";
                     $productDBRow = $conn->query("SELECT * FROM products WHERE id = '" . $product['id'] . "'")->fetch_assoc();
                     
                         echo '<li class="card">';
-                            echo '<img src="' . $productDBRow['media'] . '" alt="img" draggable="false">';
+                            if (getimagesize("../" . $row["media"])) {
+                                echo '<img src="' . $productDBRow['media'] . '" alt="img" draggable="false">';
+                            } else {
+                                echo '<video src="videos/hubble-deep-space.mp4" type="video/mp4" loop autoplay muted></video>';
+                                echo '<audio controls><source src="../' . $productDBRow['media'] . '" type="audio/mpeg"></audio>';
+                            }
                             echo '<h2>' . $productDBRow['name'] . '</h2>';
                             echo '<span>' . $product['quantity'] . 'x - $' . $productDBRow['price']. '</span>';
                             $orderTotal += $productDBRow['price'];

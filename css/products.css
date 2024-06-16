@@ -42,7 +42,7 @@ main h1 {
     border-radius: 10px;
 }
 
-.products .card img, .products .card video {
+.products .card img, .products .card video, .products .card audio {
     height: 250px;
     width: 100%;
     border-radius: 5px;
