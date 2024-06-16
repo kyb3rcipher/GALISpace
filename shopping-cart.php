@@ -19,7 +19,7 @@ include "includes/layout_start.php";
         ?>
                 <div class="product">
                     <input type="checkbox" class="product-checkbox" onchange="updateTotal()" data-price="<?php echo $product['price']; ?>" data-product-id="<?php echo $product_id; ?>">
-                    <?php if (getimagesize("../" . $row["media"])): ?>
+                    <?php if (getimagesize($product["media"])): ?>
                         <img src="<?php echo $product['media']; ?>" alt="<?php echo $product['name']; ?>">
                     <?php else: ?>
                         <audio controls><source src="../<?php echo $product['media'] ?>" type="audio/mpeg"></audio>

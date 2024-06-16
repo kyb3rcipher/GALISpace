@@ -1,5 +1,22 @@
 # GALISpace
-School project 2024 4th grade of high school programming.
+Ecommerce store written in PHP and using MySQL Database.
+
+## Screenshots
+![Home](images/screenshots/home.png)
+![Login](images/screenshots/login.png)
+![Shopping cart](images/screenshots/shopping-cart.png)
+### Light and Dark mode
+![Glasses Dark](images/screenshots/glasses-dark.png)
+![Glasses Light](images/screenshots/glasses-light.png)
+### Admin panels
+![Accounts Manager](images/screenshots/admin-accounts-manager.png)
+![Orders Manager](images/screenshots/admin-orders-manager.png)
+### Responsive
+![Responsive 1](images/screenshots/responsive1.jpeg)
+![Responsive 2](images/screenshots/responsive2.jpeg)
+![Responsive 3](images/screenshots/responsive3.jpeg)
+![Responsive 4](images/screenshots/responsive6.jpeg)
+![Responsive 5](images/screenshots/responsive5.jpeg)
 
 ## Credits
 - [DяA (Daniel Ruiz de Alegría)](https://drasite.com/).
