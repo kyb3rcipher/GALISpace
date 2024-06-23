@@ -62,3 +62,7 @@ function toggleLightMode() {
 function notLogged() {
     alert("You need to log in for this!");
 }
+
+function demoMessage() {
+    alert("This is a demo");
+}
