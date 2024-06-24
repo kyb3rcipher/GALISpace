@@ -72,15 +72,15 @@ button:hover, .button:hover {
     -webkit-background-clip: text;
 }
 
-.chevron-link::after {
-    content: '›';
+.chevron-link::before {
+    content: '‹ ';
     display: inline-block;
     margin-left: .2em;
     transition: transform .15s linear;
     will-change: transform
 }
 
-.chevron-link:hover::after {
+.chevron-link:hover::before {
     transform: translateX(.1em)
 }
 
