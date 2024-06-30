@@ -1,6 +1,9 @@
 # GALISpace
 Ecommerce store written in PHP and using MySQL Database.
 
+### Caution:
+This site has multiple vulnerabilities such as cookie-editor and some sql-injection, path traversal. Care must be taken if it is used for a deploy that is not a demo. (It is a school project so it was not necessary to take care of these aspects)
+
 ## Screenshots
 ![Home](images/screenshots/home.png)
 ![Login](images/screenshots/login.png)
